@@ -57,6 +57,12 @@ export default defineConfig({
               component: './Welcome',
             },
             {
+              path: '/monitor',
+              name: 'monitor',
+              icon: 'thunderbolt',
+              component: './Monitor',
+            },
+            {
               path: '/admin',
               name: 'admin',
               icon: 'crown',

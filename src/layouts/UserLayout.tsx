@@ -1,4 +1,5 @@
-import { DefaultFooter, MenuDataItem, getMenuData, getPageTitle } from '@ant-design/pro-layout';
+import { MenuDataItem, getMenuData, getPageTitle } from '@ant-design/pro-layout';
+import GlobalFooter from '@/components/GlobalFooter';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { Link, SelectLang, useIntl, ConnectProps, connect } from 'umi';
 import React from 'react';
@@ -33,14 +34,6 @@ const UserLayout: React.FC<UserLayoutProps> = (props) => {
     breadcrumb,
     ...props,
   });
-  // 底部版权信息
-  const footerInfo = [
-    {
-      title: 'Power Blazers',
-      href: 'http://www.google.com',
-      blankTarget: true,
-    },
-  ];
   return (
     <HelmetProvider>
       <Helmet>
@@ -66,7 +59,7 @@ const UserLayout: React.FC<UserLayoutProps> = (props) => {
           </div>
           {children}
         </div>
-        <DefaultFooter links={footerInfo} copyright="Power Blazers" />
+        <GlobalFooter />
       </div>
     </HelmetProvider>
   );
