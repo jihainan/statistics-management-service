@@ -15,4 +15,6 @@ export default {
   'monitor.monitor.popular-searches': '熱門搜索',
   'monitor.monitor.resource-surplus': '資源剩余',
   'monitor.monitor.fund-surplus': '補貼資金剩余',
+  // 新增
+  'monitor.monitor.intelligent-control-statistics': '智能調控統計',
 };

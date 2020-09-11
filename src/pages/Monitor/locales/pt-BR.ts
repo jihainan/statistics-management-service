@@ -16,4 +16,6 @@ export default {
   'monitor.monitor.resource-surplus': 'Resource Surplus',
   'monitor.monitor.fund-surplus': 'Fund Surplus',
   'monitor.exception.back': 'Back to home',
+  // 新增
+  'monitor.monitor.intelligent-control-statistics': 'Intelligent Control Statistics',
 };

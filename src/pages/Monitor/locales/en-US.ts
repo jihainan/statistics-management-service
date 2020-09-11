@@ -15,4 +15,6 @@ export default {
   'monitor.monitor.popular-searches': 'Popular Searches',
   'monitor.monitor.resource-surplus': 'Resource Surplus',
   'monitor.monitor.fund-surplus': 'Fund Surplus',
+  // 新增
+  'monitor.monitor.intelligent-control-statistics': 'Intelligent Control Statistics',
 };

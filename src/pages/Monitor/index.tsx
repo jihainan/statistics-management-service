@@ -1,17 +1,13 @@
-import { Card, Col, Row, Statistic } from 'antd';
+import { Card, Col, Row } from 'antd';
 import { FormattedMessage, connect, formatMessage, Dispatch } from 'umi';
 import React, { Component } from 'react';
 
+import Analysis from '@/pages/Analysis';
 import { GridContent } from '@ant-design/pro-layout';
-import numeral from 'numeral';
 import { StateType } from './model';
-import { Pie, WaterWave, Gauge, TagCloud, Map } from './components/Charts';
+import { Gauge } from './components/Charts';
 import ActiveChart from './components/ActiveChart';
 import styles from './style.less';
-
-const { Countdown } = Statistic;
-
-const deadline = Date.now() + 1000 * 60 * 60 * 24 * 2 + 1000 * 30; // Moment is also OK
 
 interface MonitorProps {
   monitor: StateType;
@@ -28,8 +24,6 @@ class Monitor extends Component<MonitorProps> {
   }
 
   render() {
-    const { monitor, loading } = this.props;
-    const { tags } = monitor;
     return (
       <GridContent>
         <React.Fragment>
@@ -38,63 +32,16 @@ class Monitor extends Component<MonitorProps> {
               <Card
                 title={
                   <FormattedMessage
-                    id="monitor.monitor.trading-activity"
-                    defaultMessage="Real-Time Trading Activity"
+                    id="monitor.monitor.intelligent-control-statistics"
+                    defaultMessage="Intelligent Control Statistics"
                   />
                 }
                 bordered={false}
+                bodyStyle={{ padding: 0 }}
               >
-                <Row>
-                  <Col md={6} sm={12} xs={24}>
-                    <Statistic
-                      title={
-                        <FormattedMessage
-                          id="monitor.monitor.total-transactions"
-                          defaultMessage="Total transactions today"
-                        />
-                      }
-                      suffix="元"
-                      value={numeral(124543233).format('0,0')}
-                    />
-                  </Col>
-                  <Col md={6} sm={12} xs={24}>
-                    <Statistic
-                      title={
-                        <FormattedMessage
-                          id="monitor.monitor.sales-target"
-                          defaultMessage="Sales target completion rate"
-                        />
-                      }
-                      value="92%"
-                    />
-                  </Col>
-                  <Col md={6} sm={12} xs={24}>
-                    <Countdown
-                      title={
-                        <FormattedMessage
-                          id="monitor.monitor.remaining-time"
-                          defaultMessage="Remaining time of activity"
-                        />
-                      }
-                      value={deadline}
-                      format="HH:mm:ss:SSS"
-                    />
-                  </Col>
-                  <Col md={6} sm={12} xs={24}>
-                    <Statistic
-                      title={
-                        <FormattedMessage
-                          id="monitor.monitor.total-transactions-per-second"
-                          defaultMessage="Total transactions per second"
-                        />
-                      }
-                      suffix="元"
-                      value={numeral(234).format('0,0')}
-                    />
-                  </Col>
-                </Row>
                 <div className={styles.mapChart}>
-                  <Map />
+                  {/* <Map /> */}
+                  <Analysis />
                 </div>
               </Card>
             </Col>
@@ -130,7 +77,7 @@ class Monitor extends Component<MonitorProps> {
               </Card>
             </Col>
           </Row>
-          <Row gutter={24}>
+          {/* <Row gutter={24}>
             <Col xl={12} lg={24} sm={24} xs={24} style={{ marginBottom: 24 }}>
               <Card
                 title={
@@ -228,7 +175,7 @@ class Monitor extends Component<MonitorProps> {
                 />
               </Card>
             </Col>
-          </Row>
+          </Row> */}
         </React.Fragment>
       </GridContent>
     );

@@ -15,4 +15,6 @@ export default {
   'monitor.monitor.popular-searches': '热门搜索',
   'monitor.monitor.resource-surplus': '资源剩余',
   'monitor.monitor.fund-surplus': '补贴资金剩余',
+  // 新增
+  'monitor.monitor.intelligent-control-statistics': '电站智能调控记录统计',
 };
