@@ -12,6 +12,19 @@ export interface UserLayoutProps extends Partial<ConnectProps> {
   };
 }
 
+const defaultFooterDom = (
+  <DefaultFooter
+    copyright={`${new Date().getFullYear()} Power Blazers`}
+    links={[
+      {
+        title: 'Power Blazers',
+        href: 'https://www.bupt.edu.cn/',
+        blankTarget: true,
+      },
+    ]}
+  />
+);
+
 const UserLayout: React.FC<UserLayoutProps> = (props) => {
   const {
     route = {
@@ -53,12 +66,13 @@ const UserLayout: React.FC<UserLayoutProps> = (props) => {
               </Link>
             </div>
             <div className={styles.desc}>
-              Power Blazers 是北邮西土城校区最具创造力的边缘计算团队
+              <div>———— 北邮西土城校区最具创造力的边缘计算团队打造</div>
+              轨道式风力发电监控管理系统
             </div>
           </div>
           {children}
         </div>
-        <DefaultFooter />
+        {defaultFooterDom}
       </div>
     </HelmetProvider>
   );
