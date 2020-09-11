@@ -119,7 +119,7 @@ const salesTypeDataOffline = [
 const offlineData = [];
 for (let i = 0; i < 10; i += 1) {
   offlineData.push({
-    name: `Stores ${i}`,
+    name: `发电站 ${i}`,
     cvr: Math.ceil(Math.random() * 9) / 10,
   });
 }

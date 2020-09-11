@@ -118,7 +118,7 @@ const salesTypeDataOffline = [
 const offlineData = [];
 for (let i = 0; i < 10; i += 1) {
   offlineData.push({
-    name: `Stores ${i}`,
+    name: `发电站 ${i}`,
     cvr: Math.ceil(Math.random() * 9) / 10,
   });
 }
@@ -141,18 +141,18 @@ const titles = [
   'Vue',
   'Webpack',
 ];
-const avatars = [
-  'https://gw.alipayobjects.com/zos/rmsportal/WdGqmHpayyMjiEhcKoVE.png', // Alipay
-  'https://gw.alipayobjects.com/zos/rmsportal/zOsKZmFRdUtvpqCImOVY.png', // Angular
-  'https://gw.alipayobjects.com/zos/rmsportal/dURIMkkrRFpPgTuzkwnB.png', // Ant Design
-  'https://gw.alipayobjects.com/zos/rmsportal/sfjbOqnsXXJgNCjCzDBL.png', // Ant Design Pro
-  'https://gw.alipayobjects.com/zos/rmsportal/siCrBXXhmvTQGWPNLBow.png', // Bootstrap
-  'https://gw.alipayobjects.com/zos/rmsportal/kZzEzemZyKLKFsojXItE.png', // React
-  'https://gw.alipayobjects.com/zos/rmsportal/ComBAopevLwENQdKWiIn.png', // Vue
-  'https://gw.alipayobjects.com/zos/rmsportal/nxkuOJlFJuAUhzlMTCEe.png', // Webpack
+const avatars2 = [
+  '/avatar/bear.jpeg', // Alipay
+  '/avatar/boy.jpeg', // Angular
+  '/avatar/child.jpeg', // Ant Design
+  '/avatar/default.jpg', // Ant Design Pro
+  '/avatar/girl.jpeg', // Bootstrap
+  '/avatar/peak.jpeg', // React
+  '/avatar/smell.png', // Vue
+  '/avatar/bear.jpeg', // Webpack
 ];
 
-const avatars2 = [
+const avatars = [
   'https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png',
   'https://gw.alipayobjects.com/zos/rmsportal/cnrhVkzwxjPwAaCfPbdc.png',
   'https://gw.alipayobjects.com/zos/rmsportal/gaOngJwsRYRaVAuXXcmB.png',

@@ -5,7 +5,7 @@ export default {
   'monitor.monitor.remaining-time': '活动剩余时间',
   'monitor.monitor.total-transactions-per-second': '每秒交易总额',
   'monitor.monitor.activity-forecast': '活动情况预测',
-  'monitor.monitor.efficiency': '券核效率',
+  'monitor.monitor.efficiency': '发电效率',
   'monitor.monitor.ratio': '跳出率',
   'monitor.monitor.proportion-per-category': '各品类占比',
   'monitor.monitor.fast-food': '中式快餐',
