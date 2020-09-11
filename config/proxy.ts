@@ -12,6 +12,10 @@ export default {
       changeOrigin: true,
       pathRewrite: { '^': '' },
     },
+    '/control/': {
+      target: 'http://www.baidu.com',
+      changeOrigin: true,
+    },
   },
   test: {
     '/api/': {

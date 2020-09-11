@@ -3,7 +3,13 @@ import { Card, Alert, Switch } from 'antd';
 import { CompassTwoTone } from '@ant-design/icons';
 import { PageHeaderWrapper } from '@ant-design/pro-layout';
 
-const onChange = (checked: Boolean) => {
+import { controllModel } from '@/services/data';
+
+const onChange = (checked: boolean) => {
+  controllModel({ state: checked }).then((res) => {
+    // eslint-disable-next-line no-console
+    console.log(res);
+  });
   // eslint-disable-next-line no-console
   console.log(`switch to ${checked}`);
 };
