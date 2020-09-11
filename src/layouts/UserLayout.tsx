@@ -1,5 +1,4 @@
-import { MenuDataItem, getMenuData, getPageTitle } from '@ant-design/pro-layout';
-import GlobalFooter from '@/components/GlobalFooter';
+import { DefaultFooter, MenuDataItem, getMenuData, getPageTitle } from '@ant-design/pro-layout';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { Link, SelectLang, useIntl, ConnectProps, connect } from 'umi';
 import React from 'react';
@@ -59,7 +58,7 @@ const UserLayout: React.FC<UserLayoutProps> = (props) => {
           </div>
           {children}
         </div>
-        <GlobalFooter />
+        <DefaultFooter />
       </div>
     </HelmetProvider>
   );

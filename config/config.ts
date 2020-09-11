@@ -56,7 +56,7 @@ export default defineConfig({
             },
             {
               name: 'monitor',
-              icon: 'smile',
+              icon: 'thunderbolt',
               path: '/monitor',
               component: './Monitor',
             },

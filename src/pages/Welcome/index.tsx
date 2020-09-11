@@ -1,6 +1,5 @@
 import { Avatar, Card, Col, List, Skeleton, Row, Statistic } from 'antd';
 import React, { Component } from 'react';
-
 import { Link, Dispatch, connect } from 'umi';
 import { PageContainer } from '@ant-design/pro-layout';
 import moment from 'moment';
@@ -12,27 +11,23 @@ import { ActivitiesType, CurrentUser, NoticeType, RadarDataType } from './data.d
 
 const links = [
   {
-    title: '操作一',
+    title: '模式切换',
     href: '',
   },
   {
-    title: '操作二',
+    title: '状态检测',
     href: '',
   },
   {
-    title: '操作三',
+    title: '设备管理',
     href: '',
   },
   {
-    title: '操作四',
+    title: '环境配置',
     href: '',
   },
   {
-    title: '操作五',
-    href: '',
-  },
-  {
-    title: '操作六',
+    title: '硬件更新',
     href: '',
   },
 ];
@@ -60,7 +55,7 @@ const PageHeaderContent: React.FC<{ currentUser: CurrentUser }> = ({ currentUser
       </div>
       <div className={styles.content}>
         <div className={styles.contentTitle}>
-          早安，
+          您好，
           {currentUser.name}
           ，祝你开心每一天！
         </div>
@@ -75,13 +70,13 @@ const PageHeaderContent: React.FC<{ currentUser: CurrentUser }> = ({ currentUser
 const ExtraContent: React.FC<{}> = () => (
   <div className={styles.extraContent}>
     <div className={styles.statItem}>
-      <Statistic title="项目数" value={56} />
+      <Statistic title="发电站数量" value={56} />
     </div>
     <div className={styles.statItem}>
-      <Statistic title="团队内排名" value={8} suffix="/ 24" />
+      <Statistic title="活动站比例" value={8} suffix="/ 24" />
     </div>
     <div className={styles.statItem}>
-      <Statistic title="项目访问" value={2223} />
+      <Statistic title="总发电量" value={2323} />
     </div>
   </div>
 );
@@ -134,14 +129,7 @@ class Dashboard extends Component<DashboardProps> {
   };
 
   render() {
-    const {
-      currentUser,
-      activities,
-      projectNotice,
-      projectLoading,
-      activitiesLoading,
-      radarData,
-    } = this.props;
+    const { currentUser, activities, activitiesLoading, radarData } = this.props;
 
     if (!currentUser || !currentUser.userid) {
       return null;
@@ -153,39 +141,6 @@ class Dashboard extends Component<DashboardProps> {
       >
         <Row gutter={24}>
           <Col xl={16} lg={24} md={24} sm={24} xs={24}>
-            <Card
-              className={styles.projectList}
-              style={{ marginBottom: 24 }}
-              title="进行中的项目"
-              bordered={false}
-              extra={<Link to="/">全部项目</Link>}
-              loading={projectLoading}
-              bodyStyle={{ padding: 0 }}
-            >
-              {projectNotice.map((item) => (
-                <Card.Grid className={styles.projectGrid} key={item.id}>
-                  <Card bodyStyle={{ padding: 0 }} bordered={false}>
-                    <Card.Meta
-                      title={
-                        <div className={styles.cardTitle}>
-                          <Avatar size="small" src={item.logo} />
-                          <Link to={item.href}>{item.title}</Link>
-                        </div>
-                      }
-                      description={item.description}
-                    />
-                    <div className={styles.projectItemContent}>
-                      <Link to={item.memberLink}>{item.member || ''}</Link>
-                      {item.updatedAt && (
-                        <span className={styles.datetime} title={item.updatedAt}>
-                          {moment(item.updatedAt).fromNow()}
-                        </span>
-                      )}
-                    </div>
-                  </Card>
-                </Card.Grid>
-              ))}
-            </Card>
             <Card
               bodyStyle={{ padding: 0 }}
               bordered={false}
@@ -214,30 +169,11 @@ class Dashboard extends Component<DashboardProps> {
             <Card
               style={{ marginBottom: 24 }}
               bordered={false}
-              title="XX 指数"
+              title="发电站健康指数"
               loading={radarData.length === 0}
             >
               <div className={styles.chart}>
                 <Radar hasLegend height={343} data={radarData} />
-              </div>
-            </Card>
-            <Card
-              bodyStyle={{ paddingTop: 12, paddingBottom: 12 }}
-              bordered={false}
-              title="团队"
-              loading={projectLoading}
-            >
-              <div className={styles.members}>
-                <Row gutter={48}>
-                  {projectNotice.map((item) => (
-                    <Col span={12} key={`members-item-${item.id}`}>
-                      <Link to={item.href}>
-                        <Avatar src={item.logo} size="small" />
-                        <span className={styles.member}>{item.member}</span>
-                      </Link>
-                    </Col>
-                  ))}
-                </Row>
               </div>
             </Card>
           </Col>
