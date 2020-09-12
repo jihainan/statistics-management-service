@@ -13,7 +13,7 @@ export default {
       pathRewrite: { '^': '' },
     },
     '/control/': {
-      target: 'http://10.11.24.177:7777',
+      target: 'http://192.168.1.103:7777',
       changeOrigin: true,
       pathRewrite: { '^/control': '/' },
     },
