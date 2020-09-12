@@ -233,99 +233,116 @@ const getActivities = [
     id: 'trend-1',
     updatedAt: new Date(),
     user: {
-      name: '曲丽丽',
+      name: '管理员一',
       avatar: avatars2[0],
     },
     group: {
-      name: '高逼格设计天团',
+      name: '发电站2',
       link: 'http://github.com/',
     },
     project: {
-      name: '六月迭代',
+      name: '风向智能跟踪模式',
       link: 'http://github.com/',
     },
-    template: '在 @{group} 新建项目 @{project}',
+    template: '将 @{group} 的模式调整为 @{project}',
   },
   {
     id: 'trend-2',
     updatedAt: new Date(),
     user: {
-      name: '付小小',
+      name: '管理员二',
       avatar: avatars2[1],
     },
     group: {
-      name: '高逼格设计天团',
+      name: '发电站3',
       link: 'http://github.com/',
     },
     project: {
-      name: '六月迭代',
+      name: '风向智能跟踪模式',
       link: 'http://github.com/',
     },
-    template: '在 @{group} 新建项目 @{project}',
+    template: '关闭了 @{group} ',
   },
   {
     id: 'trend-3',
     updatedAt: new Date(),
     user: {
-      name: '林东东',
+      name: '管理员一',
       avatar: avatars2[2],
     },
     group: {
-      name: '中二少女团',
+      name: '发电站3',
       link: 'http://github.com/',
     },
     project: {
-      name: '六月迭代',
+      name: '风向智能跟踪模式',
       link: 'http://github.com/',
     },
-    template: '在 @{group} 新建项目 @{project}',
+    template: '关闭了 @{group} 的 @{project}',
   },
   {
     id: 'trend-4',
     updatedAt: new Date(),
     user: {
-      name: '周星星',
+      name: '管理员二',
       avatar: avatars2[4],
     },
     project: {
-      name: '5 月日常迭代',
+      name: '风向智能跟踪模式',
       link: 'http://github.com/',
     },
-    template: '将 @{project} 更新至已发布状态',
+    template: '对 @{project} 进行了检测',
   },
   {
     id: 'trend-5',
     updatedAt: new Date(),
     user: {
-      name: '朱偏右',
+      name: '管理员三',
       avatar: avatars2[3],
     },
     project: {
-      name: '工程效能',
+      name: '风向智能跟踪模式',
       link: 'http://github.com/',
     },
     comment: {
-      name: '留言',
+      name: '发电站3',
       link: 'http://github.com/',
     },
-    template: '在 @{project} 发布了 @{comment}',
+    template: '对 @{project} 算法进行了优化更新',
   },
   {
     id: 'trend-6',
     updatedAt: new Date(),
     user: {
-      name: '乐哥',
+      name: '管理员一',
       avatar: avatars2[5],
     },
     group: {
-      name: '程序员日常',
+      name: '发电站3',
       link: 'http://github.com/',
     },
     project: {
-      name: '品牌迭代',
+      name: '风向智能跟踪模式',
       link: 'http://github.com/',
     },
-    template: '在 @{group} 新建项目 @{project}',
+    template: '将 @{group} 模式调整为 @{project}',
+  },
+  {
+    id: 'trend-7',
+    updatedAt: new Date(),
+    user: {
+      name: '管理员一',
+      avatar: avatars2[5],
+    },
+    group: {
+      name: '发电站2',
+      link: 'http://github.com/',
+    },
+    project: {
+      name: '风向智能跟踪模式',
+      link: 'http://github.com/',
+    },
+    template: '将 @{group} 模式调整为 @{project}',
   },
 ];
 
