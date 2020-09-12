@@ -5,7 +5,7 @@ export interface ControllParams {
 }
 
 export async function controllModel(params: ControllParams) {
-  return request('/control/model', {
+  return request('/control/analysis/changeMode', {
     method: 'POST',
     data: params,
   });

@@ -13,8 +13,9 @@ export default {
       pathRewrite: { '^': '' },
     },
     '/control/': {
-      target: 'http://www.baidu.com',
+      target: 'http://10.11.24.177:7777',
       changeOrigin: true,
+      pathRewrite: { '^/control': '/' },
     },
   },
   test: {
