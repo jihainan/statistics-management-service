@@ -1,6 +1,5 @@
 import React from 'react';
 import { Card, Alert, Switch } from 'antd';
-import { CompassTwoTone } from '@ant-design/icons';
 import { PageHeaderWrapper } from '@ant-design/pro-layout';
 
 import { controllModel } from '@/services/data';
@@ -27,13 +26,7 @@ export default (): React.ReactNode => (
           marginBottom: 48,
         }}
       />
-      <h3>智能风向跟踪模式介绍：</h3>
-      <p>
-        打开智能风向跟踪模式，轨道式风力发电系统将实时检测风向，并通过智能算法计算最优叶片迎风角度，主动调整发电机叶片角度，以达到风能的利用效率最大化。
-      </p>
-
-      <div style={{ fontSize: 24, lineHeight: 1.5 }}>
-        <CompassTwoTone spin style={{ marginRight: 8 }} />
+      <div style={{ fontSize: 20, lineHeight: 1.5 }}>
         智能风向跟踪模式
         <Switch
           checkedChildren="开启"
@@ -43,6 +36,11 @@ export default (): React.ReactNode => (
           style={{ margin: '0 16px' }}
         />
       </div>
+      <br />
+      <h3>模式介绍：</h3>
+      <p>
+        打开智能风向跟踪模式，轨道式风力发电系统将实时检测风向，并通过智能算法计算最优叶片迎风角度，主动调整发电机叶片角度，以达到风能的利用效率最大化。
+      </p>
     </Card>
   </PageHeaderWrapper>
 );
