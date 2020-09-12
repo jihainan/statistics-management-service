@@ -161,11 +161,11 @@ const radarOriginData = [
 
 const radarData: RadarData[] = [];
 const radarTitleMap = {
-  ref: '引用',
-  koubei: '口碑',
-  output: '产量',
-  contribute: '贡献',
-  hot: '热度',
+  ref: '工况',
+  koubei: '载荷',
+  output: '寿命',
+  contribute: '过载',
+  hot: '故障',
 };
 radarOriginData.forEach((item) => {
   Object.keys(item).forEach((key) => {

@@ -331,7 +331,7 @@ const getActivities = [
 
 const radarOriginData = [
   {
-    name: '个人',
+    name: '每日',
     ref: 10,
     koubei: 8,
     output: 4,
@@ -339,7 +339,7 @@ const radarOriginData = [
     hot: 7,
   },
   {
-    name: '团队',
+    name: '每周',
     ref: 3,
     koubei: 9,
     output: 6,
@@ -347,7 +347,7 @@ const radarOriginData = [
     hot: 1,
   },
   {
-    name: '部门',
+    name: '每月',
     ref: 4,
     koubei: 1,
     output: 6,
@@ -358,11 +358,11 @@ const radarOriginData = [
 
 const radarData: any[] = [];
 const radarTitleMap = {
-  ref: '引用',
-  koubei: '口碑',
-  output: '产量',
-  contribute: '贡献',
-  hot: '热度',
+  ref: '工况',
+  koubei: '载荷',
+  output: '寿命',
+  contribute: '过载',
+  hot: '故障',
 };
 radarOriginData.forEach((item) => {
   Object.keys(item).forEach((key) => {
