@@ -1,16 +1,23 @@
 import React from 'react';
-import { Card, Alert, Switch } from 'antd';
+import { Card, Alert, Switch, notification } from 'antd';
 import { PageHeaderWrapper } from '@ant-design/pro-layout';
 
 import { controllModel } from '@/services/data';
 
-const onChange = (checked: boolean) => {
-  controllModel({ state: checked }).then((res) => {
-    // eslint-disable-next-line no-console
-    console.log(res);
+const openNotificationWithIcon = (type: string, tips: string) => {
+  notification[type]({
+    message: '模式变更成功！',
+    description: tips,
   });
-  // eslint-disable-next-line no-console
-  console.log(`switch to ${checked}`);
+};
+
+const onChange = (checked: boolean) => {
+  const tips = checked ? '智能风向跟踪模式已打开！' : '智能风向跟踪模式已关闭！';
+  controllModel({ state: checked }).then((res) => {
+    if (res.code === 200) {
+      openNotificationWithIcon('success', tips);
+    }
+  });
 };
 
 export default (): React.ReactNode => (
